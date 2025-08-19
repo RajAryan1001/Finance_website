@@ -205,7 +205,7 @@ export default function UniqueHeader() {
         { text: 'Financial Planning', path: '/services/financial-planning' },
         { text: 'GST Registration', path: '/services/gst_registration' },
         { text: 'GST Return Filing', path: '/services/gst_return_filling' },
-        { text: 'Income Tax Return Filing', path: '/services/Income_tax_return_filling' },
+        // { text: 'Income Tax Return Filing', path: '/services/Income_tax_return_filling' },
         { text: 'TDS Return Filing', path: '/services/tds_return _filling' },
         { text: 'Accounting', path: '/services/accounting' },
         { text: 'Digital Signature', path: '/services/digital_signnature' },

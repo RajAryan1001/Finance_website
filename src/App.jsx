@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/services/financial-planning" element={<FinancialPlanning />} />
         <Route path="/services/gst_registration" element={<GSTRegistration />} />
         <Route path="/services/gst_return_filling" element={<GST_Return_Filling />} />
-        <Route path="/services/income_tax_return_filling" element={<Income_tax_return />} />
+        {/* <Route path="/services/income_tax_return_filling" element={<Income_tax_return />} /> */}
         <Route path="/services/tds_return _filling" element={<TdsReturnFilling />} />
         <Route path="/services/accounting" element={<Accounting />} />
         <Route path="/services/digital_signnature" element={<Digital_Signature />} />
