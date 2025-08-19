@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, FileText, Calendar, AlertCircle, CheckCircle, HelpCircle, TrendingUp } from 'lucide-react';
 import Layout from '../../Layout/Layout'; // Ensure this path is correct
-import '../../../styles/Servicescss/income_tax_return_filling.css';
 
 const IncomeTaxReturnFiling = () => {
   const [activeSection, setActiveSection] = useState('');
