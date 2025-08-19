@@ -1,0 +1,116 @@
+.why-choose-and-solutions {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .why-us, .solutions-section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+  }
+
+  .why-us-content, .solutions-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .why-us-text, .solutions-text {
+    flex: 1;
+  }
+
+  .why-us-image, .solutions-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .why-us-image img, .solutions-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    mix-blend-mode: multiply;
+  }
+
+  .why-us-image:hover img, .solutions-image:hover img {
+    transform: scale(1.05);
+  }
+
+  .why-us-text h3, .solutions-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1e40af;
+  }
+
+  .why-us-text p, .solutions-text p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  .reason-item, .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .reason-item:hover, .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .check-icon {
+    color: #2563eb;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .why-us-content, .solutions-content {
+      flex-direction: column;
+    }
+
+    .why-us-image, .solutions-image {
+      order: -1;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .why-us-text h3, .solutions-text h3 {
+      font-size: 1.5rem;
+    }
+  }

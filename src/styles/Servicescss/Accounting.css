@@ -1,0 +1,108 @@
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .accounting-page {
+    --primary-color:  #3b82f6;
+    --primary-dark:  #2563eb;
+    --secondary-color: #e11d48;
+    --background-color: #f3f4f6;
+    --text-color: #1f2937;
+    --text-light: #6b7280;
+    --white: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
+  .scroll-progress-accounting {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    transform-origin: left;
+    z-index: 1000;
+  }
+  
+  .hero-accounting {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .hero-title-accounting, .hero-subtitle-accounting {
+    text-align: center;
+  }
+  
+  .content-accounting {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .intro-accounting {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .topics-accounting {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .topic-accounting {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: var(--transition);
+  }
+  
+  .topic-accounting:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px var(--shadow-color);
+  }
+  
+  .topic-header-accounting {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .accounting-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+  }
+  
+  .chevron-accounting {
+    margin-left: auto;
+    transition: transform 0.3s;
+  }
+  
+  .topic-content-accounting {
+    display: none;
+    padding: 1rem 1.5rem;
+  }
+  
+  .topic-accounting.active-accounting .topic-content-accounting {
+    display: block;
+  }
+  

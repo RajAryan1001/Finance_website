@@ -1,0 +1,112 @@
+
+.finance-footer {
+  background-color: var(--secondary-color, #282c34 ) !important;
+  color: var(--background-color, #f8fafc);
+  padding: 4rem 2rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.finance-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.finance-footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.finance-footer-logo-section {
+  grid-column: 1 / -1;
+}
+
+.finance-footer-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--accent-color, #f59e0b);
+  margin-bottom: 1rem;
+}
+
+.finance-footer-logo-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+.finance-footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.finance-footer-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--background-color, #f8fafc);
+}
+
+.finance-footer-title {
+  color: var(--accent-color, #f59e0b);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.finance-footer-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.finance-footer-link {
+  color: var(--background-color, #f8fafc);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 2;
+  transition: color 0.3s ease;
+}
+
+.finance-footer-link:hover {
+  color: var(--accent-color, #f59e0b);
+}
+
+.finance-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.finance-footer-copyright {
+  font-size: 0.8rem;
+}
+
+.finance-footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.finance-footer-social-link {
+  color: var(--background-color, #f8fafc);
+  transition: color 0.3s ease;
+}
+
+.finance-footer-social-link:hover {
+  color: var(--accent-color, #f59e0b);
+}
+
+@media (max-width: 768px) {
+  .finance-footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .finance-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
