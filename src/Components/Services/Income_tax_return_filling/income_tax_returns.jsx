@@ -63,6 +63,234 @@ const IncomeTaxReturnFiling = () => {
 
   return (
     <Layout>
+      <>
+         {/* Internal CSS inside style tag */}
+      <style>{`
+        body, html {
+          overflow-x: hidden;
+        }
+        
+        .gst-return-filing-container {
+          --primary-color: #3b82f6;
+          --primary-dark: #2563eb;
+          --primary-light: #60a5fa;
+          --secondary-color: #10b981;
+          --accent-color: #f59e0b;
+          --background-color: #f3f4f6;
+          --text-color: #1f2937;
+          --text-light: #6b7280;
+          --white: #ffffff;
+          --shadow-color: rgba(0, 0, 0, 0.1);
+          --transition: all 0.3s ease;
+
+          font-family: 'Inter', sans-serif;
+          color: var(--text-color);
+          background-color: var(--background-color);
+          line-height: 1.5;
+          width: 100vw;
+        }
+
+        .gst-scroll-progress {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: var(--primary-color);
+          transform-origin: left;
+          z-index: 1000;
+        }
+
+        .gst-hero {
+          background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+          color: var(--white);
+          padding: 4rem 2rem;
+          text-align: center;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .gst-hero::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, var(--primary-light) 0%, transparent 50%);
+          opacity: 0.1;
+          animation: rotate 60s linear infinite;
+        }
+
+        @keyframes rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        .gst-hero-title {
+          font-size: 3rem;
+          font-weight: 800;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .gst-hero-subtitle {
+          font-size: 1.25rem;
+          max-width: 600px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .gst-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem;
+        }
+
+        .gst-intro {
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+
+        .gst-intro h2 {
+          font-size: 2rem;
+          color: var(--primary-color);
+          margin-bottom: 1rem;
+        }
+
+        .gst-topics {
+          display: grid;
+          gap: 1.5rem;
+        }
+
+        .gst-topic {
+          background-color: var(--white);
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 6px var(--shadow-color);
+          transition: var(--transition);
+        }
+
+        .gst-topic:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 15px var(--shadow-color);
+        }
+
+        .gst-topic-header {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 1.5rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          text-align: left;
+        }
+
+        .gst-topic-icon {
+          width: 2rem;
+          height: 2rem;
+          color: var(--primary-color);
+          margin-right: 1rem;
+        }
+
+        .gst-topic h3 {
+          flex-grow: 1;
+          font-size: 1.25rem;
+          margin: 0;
+        }
+
+        .gst-chevron {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: var(--primary-color);
+          transition: var(--transition);
+        }
+
+        .gst-topic.active .gst-chevron {
+          transform: rotate(180deg);
+        }
+
+        .gst-topic-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: var(--transition);
+        }
+
+        .gst-topic.active .gst-topic-content {
+          max-height: 500px;
+          padding: 0 1.5rem 1.5rem;
+        }
+
+        .gst-cta-section {
+          text-align: center;
+          margin-top: 3rem;
+        }
+
+        .gst-cta-section h2 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+
+        .gst-cta-section p {
+          margin-bottom: 1.5rem;
+        }
+
+        .gst-cta-button {
+          padding: 0.75rem 2rem;
+          font-size: 1rem;
+          color: var(--white);
+          background-color: var(--primary-color);
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color var(--transition);
+        }
+
+        .gst-cta-button:hover {
+          background-color: var(--primary-dark);
+        }
+
+        .gst-footer {
+          background-color: var(--primary-dark);
+          color: var(--white);
+          text-align: center;
+          padding: 2rem;
+          margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+          .gst-hero-title {
+            font-size: 2.5rem;
+          }
+        
+          .gst-hero-subtitle {
+            font-size: 1rem;
+          }
+        
+          .gst-content {
+            padding: 1rem;
+          }
+        
+          .gst-topic-header {
+            padding: 1rem;
+          }
+        
+          .gst-topic.active .gst-topic-content {
+            padding: 0 1rem 1rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .gst-topics {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      `}</style>
+     
       <div className="tax-return-filing-container">
         <div className="tax-scroll-progress" style={{ transform: `scaleX(${scrollProgress / 100})` }}></div>
         <header className="tax-hero">
@@ -96,8 +324,17 @@ const IncomeTaxReturnFiling = () => {
         </main>
         <footer className="tax-footer">
           <p>Stay compliant, maximize savings. Let us handle your income tax return filing while you focus on your goals.</p>
+
+           <style>
+          {
+              
+          }
+        </style>
         </footer>
+
+       
       </div>
+       </>
     </Layout>
   );
 };
